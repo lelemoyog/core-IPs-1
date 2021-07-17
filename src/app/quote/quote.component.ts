@@ -8,8 +8,8 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote(1,'issa saitemu','Be patient over what be falls you','3/5/2021'),
-    new Quote(2,'issah saitemuz','Be patient over what be falls you','1/5/2020')
+    new Quote(1,'issa saitemu','Be patient over what be falls you','issah','3/5/2021'),
+    new Quote(2,'issah saitemuz','Be patient over what be falls you','issah','1/5/2020')
   ]
 
   constructor() { }
