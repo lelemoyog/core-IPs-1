@@ -4,10 +4,10 @@
 </div>
 <div *ngFor="let qoute of quotes;let i = index" class="quote">
     
-    <div class="card mb-3 mt-3 p-3  text-center text-dark quote" >
+    <div class="card mb-3 mt-3 p-3  text-center text-dark quote"  [ngStyle]="{background: 'url(assets/img/painted-watercolor.jpg)'}">
         <p>{{qoute.postedquote}}</p>
         <app-vote></app-vote><small><button class="btn btn-outline-primary" (click)="showform(i)" type="submit">showdetails</button></small>
-        <small [hidden]="isdisplay" >
+        <small [hidden]="isdisplay" class="actualquote">
             <em>Author: {{qoute.author}}<br><p>Name: {{qoute.name}}<br>
             Online for {{qoute.posteddate | filterdate}}</p></em>
             <button type="button" (click)="deletequote(i)" class="btn btn-outline-danger"><small>Delete</small></button>

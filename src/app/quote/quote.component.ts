@@ -25,6 +25,7 @@ export class QuoteComponent implements OnInit {
   showform(index:number){
     this.isdisplay=!this.isdisplay
   }
+  myimage:string = "assets/img/painted-watercolor.jpg"
   constructor() { }
 
   ngOnInit(): void {
