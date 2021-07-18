@@ -1,9 +1,9 @@
 <div class="container bg-dark text-light text-center p-3">
   <h1>Rate your quote</h1>
-  <app-quote-form></app-quote-form>
+  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 </div>
 <div *ngFor="let qoute of quotes;let i = index">
-    
+    <button type="button" (click)="deletequote(i)" class="btn btn-outline-danger"><small>Delete</small></button>
     <div class="card mb-3 mt-3 p-3  text-center text-dark " >
         <p>{{qoute.postedquote}}</p>
         <small>
@@ -11,5 +11,6 @@
             {{qoute.posteddate}}</p></em>
         </small>
         <app-vote></app-vote>
+        
     </div>
 </div>

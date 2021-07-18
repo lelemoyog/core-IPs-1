@@ -8,10 +8,19 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote(1,'issa saitemu','Be patient over what be falls you','issah','3/5/2021'),
-    new Quote(2,'issah saitemuz','Be patient over what be falls you','issah','1/5/2020')
+    new Quote(1,'issa saitemu','Be patient over what be falls you','issah',new Date(2012,4,5)),
+    new Quote(2,'issah saitemuz','Be patient over what be falls you','issah',new Date(2020,12,18))
   ]
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.posteddate = new Date(quote.posteddate)
+    this.quotes.push(quote)
+  }
 
+  deletequote(index:number){
+    this.quotes.splice(index,1)
+  }
   constructor() { }
 
   ngOnInit(): void {
