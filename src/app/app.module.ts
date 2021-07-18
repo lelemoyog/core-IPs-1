@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { VoteComponent } from './vote/vote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { FilterdatePipe } from './filterdate.pipe';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     QuoteComponent,
     VoteComponent,
     QuoteFormComponent,
+    FilterdatePipe,
     
   ],
   imports: [

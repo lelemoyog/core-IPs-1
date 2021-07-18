@@ -7,8 +7,8 @@
     <div class="card mb-3 mt-3 p-3  text-center text-dark " >
         <p>{{qoute.postedquote}}</p>
         <small>
-            <em><p>{{qoute.name}}<br>
-            {{qoute.posteddate}}</p></em>
+            <em>{{qoute.author}}<br><p>{{qoute.name}}<br>
+            {{qoute.posteddate | filterdate}}</p></em>
         </small>
         <app-vote></app-vote>
         
