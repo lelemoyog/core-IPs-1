@@ -8,7 +8,7 @@
     <div class="card mb-3 mt-3 p-3  text-center text-dark quote"  [ngStyle]="{background: 'url(assets/img/painted-watercolor.jpg)'}">
         <p>{{qoute.postedquote}}</p>
         <em>Author: {{qoute.author}}</em>
-        <app-quotedetails *ngIf='qoute.showdetails' [quote]="qoute"></app-quotedetails>
+        <app-quotedetails *ngIf='qoute.showdetails' [quote]="qoute" (todeletequote)='deleteoneproject($event,i)'></app-quotedetails>
         <app-vote></app-vote><small>
             <button class="btn btn-outline-primary" (click)="showform(i)" type="submit">showdetails</button></small>
           

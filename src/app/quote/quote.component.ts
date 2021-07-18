@@ -12,7 +12,7 @@ export class QuoteComponent implements OnInit {
     new Quote(1,'issa saitemu','"Be patient over what be falls you"','issah',new Date(2012,4,5)),
     new Quote(2,'issah saitemuz',' “The Best Way To Get Started Is To Quit Talking And Begin Doing.”','Walt Disney',new Date(2020,11,18)),
     new Quote(3,'issah saitemuz','“The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.”','Winston Churchill',new Date(2019,12,12)),
-    new Quote(2,'issah saitemuz','“Don’t Let Yesterday Take Up Too Much Of Today.”','Will Rogers',new Date(2020,12,18))
+    new Quote(4,'issah saitemuz','“Don’t Let Yesterday Take Up Too Much Of Today.”','Will Rogers',new Date(2020,12,18))
   ]
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
@@ -21,8 +21,10 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote)
   }
 
-  deletequote(index:number){
-    this.quotes.splice(index,1)
+  deleteoneproject(noti:boolean,index:number){
+      if(noti){
+        this.quotes.splice(index,1)
+      }
   }
   
   showform(index:number){
