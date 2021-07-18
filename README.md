@@ -33,7 +33,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Setup/Installation Requirements
 * create an empty git repository
 * git init
-* git clone https://github.com/lelemoyog/IPs-4.git
+* git clone https://github.com/lelemoyog/core-IPs-1.git
 * and start using code
 
 ## Technologies Used
