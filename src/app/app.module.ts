@@ -8,6 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { VoteComponent } from './vote/vote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FilterdatePipe } from './filterdate.pipe';
+import { HighestvotesDirective } from './highestvotes.directive';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { FilterdatePipe } from './filterdate.pipe';
     VoteComponent,
     QuoteFormComponent,
     FilterdatePipe,
+    HighestvotesDirective,
     
   ],
   imports: [

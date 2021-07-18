@@ -16,7 +16,7 @@ export class FilterdatePipe implements PipeTransform {
     var calc2 =" years"
     var calc3 =" Hours"
 
-    if (dateCounter >= 1000 ){
+    if (dateCounter >= 365 ){
       return Math.round(dateCounter/365) + calc2;
     }else if(dateCounter < 1){
         return Math.round(dateCounter*(24/86400)) + calc3;
