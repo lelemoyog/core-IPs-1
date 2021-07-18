@@ -1,16 +1,18 @@
-<div class="container bg-dark text-light text-center p-3">
+<div class=" bg-dark text-light text-center p-3">
   <h1>Rate your quote</h1>
   <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 </div>
-<div *ngFor="let qoute of quotes;let i = index">
-    <button type="button" (click)="deletequote(i)" class="btn btn-outline-danger"><small>Delete</small></button>
-    <div class="card mb-3 mt-3 p-3  text-center text-dark " >
+<div *ngFor="let qoute of quotes;let i = index" class="quote">
+    
+    <div class="card mb-3 mt-3 p-3  text-center text-dark quote" >
         <p>{{qoute.postedquote}}</p>
-        <small>
-            <em>{{qoute.author}}<br><p>{{qoute.name}}<br>
-            {{qoute.posteddate | filterdate}}</p></em>
+        <app-vote></app-vote><small><button class="btn btn-outline-primary" (click)="showform(i)" type="submit">showdetails</button></small>
+        <small [hidden]="isdisplay" >
+            <em>Author: {{qoute.author}}<br><p>Name: {{qoute.name}}<br>
+            Online for {{qoute.posteddate | filterdate}}</p></em>
+            <button type="button" (click)="deletequote(i)" class="btn btn-outline-danger"><small>Delete</small></button>
         </small>
-        <app-vote></app-vote>
+        
         
     </div>
 </div>

@@ -2,22 +2,22 @@
 <form (ngSubmit)="collectinfo()" #quoteForm='ngForm' id="quoteform" [hidden]="isdisplay" >
     <div class="form-group">
       <label for="">Qoute</label>
-      <textarea class="form-control" [(ngModel)]='newQuote.postedquote' name="postedquote" id="" rows="3"></textarea>
+      <textarea class="form-control" [(ngModel)]='newQuote.postedquote' [(ngModel)]='postedquote' name="postedquote" id="" rows="3"></textarea>
     </div>
     <div class="form-group">
       <label for="">Author</label>
-      <input type="text" class="form-control" [(ngModel)]='newQuote.author' name="author" id="" aria-describedby="helpId" placeholder="">
+      <input type="text" class="form-control" [(ngModel)]='newQuote.author' [(ngModel)]='author' name="author" id="" aria-describedby="helpId" placeholder="">
     </div>
      <div class="form-group">
       <label for="">what is your name?</label>
-      <input type="text" class="form-control" [(ngModel)]='newQuote.name' name="name" id="" aria-describedby="helpId" placeholder="">
+      <input type="text" class="form-control" [(ngModel)]='newQuote.name ' [(ngModel)]='name'  name="name" id="" aria-describedby="helpId" placeholder="">
     </div>
    
-    <button type="submit" class="btn btn-secondary"><small>+Add</small></button>
+    <button type="submit" class="btn btn-secondary m-2"><small>+Add</small></button>
 </form>
-<!-- <div>
-  <h5>display</h5>
+<div>
+  <h5>Direct display</h5>
   <p>{{postedquote}}</p>
   <p>{{author}}</p>
   <P>{{name}}</P>
-</div> -->
+</div>

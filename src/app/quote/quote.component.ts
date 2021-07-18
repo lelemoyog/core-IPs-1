@@ -21,6 +21,10 @@ export class QuoteComponent implements OnInit {
   deletequote(index:number){
     this.quotes.splice(index,1)
   }
+  isdisplay=true;
+  showform(index:number){
+    this.isdisplay=!this.isdisplay
+  }
   constructor() { }
 
   ngOnInit(): void {

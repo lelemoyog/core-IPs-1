@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit,Input, Output, EventEmitter} from '@angular/core';
 import {Quote} from '../quote';
 
@@ -7,14 +8,17 @@ import {Quote} from '../quote';
   styleUrls: ['./vote.component.css']
 })
 export class VoteComponent implements OnInit {
- add= function(counter){ 
-   counter = 0;
-   return function( counter){
-     counter +=1;
-      return counter
-   }();
+
+count=0;
+countdownvote=0
+
+counter(){
+this.count++
+
 }
-counnt =this
+counter2(){
+this.countdownvote++
+}
 
   constructor() { }
 
