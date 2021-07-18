@@ -7,7 +7,7 @@ import {Quote} from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  [x: string]: any;
+  
   quotes:Quote[]=[
     new Quote(1,'issa saitemu','"Be patient over what be falls you"','issah',new Date(2012,4,5)),
     new Quote(2,'issah saitemuz',' “The Best Way To Get Started Is To Quit Talking And Begin Doing.”','Walt Disney',new Date(2020,11,18)),
@@ -24,11 +24,11 @@ export class QuoteComponent implements OnInit {
   deletequote(index:number){
     this.quotes.splice(index,1)
   }
-  isdisplay=true;
+  
   showform(index:number){
-    this.isdisplay=!this.isdisplay
+    this.quotes[index].showdetails=!this.quotes[index].showdetails
   }
-  myimage:string = "assets/img/painted-watercolor.jpg"
+ 
   constructor() { }
 
   ngOnInit(): void {
