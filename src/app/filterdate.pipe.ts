@@ -14,10 +14,13 @@ export class FilterdatePipe implements PipeTransform {
     var dateCounter = dateDifferenceSeconds/secondsInDay;
     var calc = "days"
     var calc2 =" years"
-    var calc3 =" Hours"
+    var calc3 =" hours"
+    var calc4 = "months"
 
     if (dateCounter >= 365 ){
       return Math.round(dateCounter/365) + calc2;
+    }else if( dateCounter >= 30){
+      return Math.round(dateCounter/30) + calc4;
     }else if(dateCounter < 1){
         return Math.round(dateCounter*(24/86400)) + calc3;
     } else{
